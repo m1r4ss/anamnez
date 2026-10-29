@@ -36,20 +36,20 @@
       <section class="hero">
         <div class="hero__text">
           <p class="eyebrow">Спецпроект о профилактике</p>
-          <h1 class="hero__title">«Жалоб нет» —<br />ещё не диагноз</h1>
+          <h1 class="hero__title">«Жалоб нет»&nbsp;—<br />ещё не&nbsp;диагноз</h1>
           <p class="hero__lead">Анамнез — то, что врач записывает с&nbsp;твоих слов. «Ничего не&nbsp;беспокоит» и&nbsp;«да&nbsp;так, ерунда» он запишет одинаково. Узнай, что тебе положено проверить бесплатно.</p>
           <a class="btn btn--outline" href="#card" data-goal="cta_hero">Собрать свою карту</a>
         </div>
-        <div class="hero__visual" aria-hidden="true">
-          <div class="blob blob--blue hero__blob1"></div>
-          <div class="blob blob--violet hero__blob2"></div>
-          <div class="blob blob--peach hero__blob3"></div>
-          <div class="glass anamnesis hero__card">
+        <div class="hero__visual" aria-hidden="true" data-parallax>
+          <div class="px" data-depth="0.6"><div class="blob blob--blue hero__blob1"></div></div>
+          <div class="px" data-depth="0.9"><div class="blob blob--violet hero__blob2"></div></div>
+          <div class="px" data-depth="1.2"><div class="blob blob--peach hero__blob3"></div></div>
+          <div class="glass anamnesis hero__card" data-depth="-0.35">
             <div class="anamnesis__head"><span>Анамнез</span><span>Влад, 24</span></div>
             <div class="anamnesis__row"><span>Жалобы</span><span class="hand">нет</span></div>
             <div class="anamnesis__row"><span>Беспокоит</span><span class="hand">ерунда</span></div>
           </div>
-          <div class="glass pulse hero__pulse">
+          <div class="glass pulse hero__pulse" data-depth="-0.55">
             <div class="pulse__top"><span>Пульс</span><span class="chip">в норме</span></div>
             <span class="pulse__title">Всё как обычно</span>
             <div class="pulse__bottom">
@@ -57,7 +57,7 @@
               <svg width="130" height="56" viewBox="0 0 130 56" fill="none" stroke="#3B4FE0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M0 36h40l4-6 4 6h10l4 4 5-34 6 46 4-12h12l6-6 6 6h29" /></svg>
             </div>
           </div>
-          <div class="hero__tags">
+          <div class="hero__tags" data-depth="-0.2">
             <span class="chip chip--glass">Бесплатно по ОМС</span>
             <span class="chip chip--glass">+1 оплачиваемый выходной</span>
           </div>
@@ -78,22 +78,24 @@
           <h2 class="label">История героя</h2>
           <p class="note">Из личного поста героя, публикуется с&nbsp;его согласия.</p>
         </div>
-        <ol class="story__steps">
-          <li class="s1">Спорт, режим</li>
-          <li class="s2">Жалоб нет</li>
-          <li class="s3">Чекап</li>
-          <li class="s4">Диагноз</li>
-          <li class="s2">Лето на лечении</li>
-          <li class="s1">Сейчас здоров</li>
+        <ol class="story__steps" role="tablist" aria-label="История Влада по шагам">
+          <li><button type="button" role="tab" data-step="0">Спорт, режим</button></li>
+          <li><button type="button" role="tab" data-step="1">Жалоб нет</button></li>
+          <li><button type="button" role="tab" data-step="2">Чекап</button></li>
+          <li><button type="button" role="tab" data-step="3" class="is-on">Диагноз</button></li>
+          <li><button type="button" role="tab" data-step="4">Лето на лечении</button></li>
+          <li><button type="button" role="tab" data-step="5">Сейчас здоров</button></li>
         </ol>
-        <div class="story__visual">
+        <div class="story__visual" data-step-visual="3">
           <div class="story__back"></div>
           <div class="story__front">
-            <div class="blob blob--blue story__blob1"></div>
-            <div class="blob blob--peach story__blob2"></div>
-            <figure class="glass story__quote" data-reveal>
-              <blockquote>«Я обнаружил его абсолютно случайно, на&nbsp;чекапе. <span>У&nbsp;меня не&nbsp;было никаких жалоб, я&nbsp;активно занимался спортом.»</span></blockquote>
-              <figcaption>Влад, 24 года · рак щитовидной железы, 2-я стадия · сейчас здоров</figcaption>
+            <div class="story__spot"></div>
+            <div class="story__glass"></div>
+            <div class="story__contour"></div>
+            <span class="chip chip--white story__tag" id="storyTag">диагноз</span>
+            <figure class="glass story__quote">
+              <blockquote id="storyQuote">«Я обнаружил его абсолютно случайно, на&nbsp;чекапе. <span>У&nbsp;меня не&nbsp;было никаких жалоб, я&nbsp;активно занимался спортом.»</span></blockquote>
+              <figcaption id="storyCap">Влад, 24 года · рак щитовидной железы, 2-я стадия</figcaption>
             </figure>
           </div>
         </div>
@@ -189,6 +191,7 @@
               <div class="medcard__actions" id="mcActions" hidden>
                 <a class="btn btn--dark" href="https://www.gosuslugi.ru/" target="_blank" rel="noopener" data-goal="gosuslugi">Записаться на Госуслугах</a>
                 <button class="btn btn--outline" type="button" id="markDone" data-goal="mark_done">Я записался</button>
+                <button class="btn btn--outline" type="button" id="cardShare" data-goal="share_card">Поделиться картой</button>
               </div>
             </article>
           </div>
@@ -232,11 +235,11 @@
         </div>
         <div class="reasons__list">
           <p class="lead">Опросы показывают одно и то же: дело не в деньгах. Дело в том, что у здорового человека нет повода.</p>
-          <details class="reason" open><summary>«Мне рано»</summary><p>Диспансеризация положена с 18 лет. Рак Влада нашли в 24, без единой жалобы.</p></details>
-          <details class="reason"><summary>«Нет времени»</summary><p>Работодатель обязан дать оплачиваемый день: до 40 лет раз в три года, после 40 — каждый год.</p></details>
-          <details class="reason"><summary>«Само пройдёт»</summary><p>Если что-то тянется дольше пары недель, это уже жалоба. С ней идут к терапевту — бесплатно.</p></details>
-          <details class="reason"><summary>«Боюсь узнать»</summary><p>Найти рано значит лечить проще. Страшнее узнать, когда уже болит.</p></details>
-          <details class="reason"><summary>«Это формальность»</summary><p>Так думают 64% россиян. Но маммография, мазок и анализ на скрытую кровь внутри неё настоящие.</p></details>
+          <details class="reason" name="reasons" open><summary>«Мне рано»</summary><p>Диспансеризация положена с 18 лет. Рак Влада нашли в 24, без единой жалобы.</p></details>
+          <details class="reason" name="reasons"><summary>«Нет времени»</summary><p>Работодатель обязан дать оплачиваемый день: до 40 лет раз в три года, после 40 — каждый год.</p></details>
+          <details class="reason" name="reasons"><summary>«Само пройдёт»</summary><p>Если что-то тянется дольше пары недель, это уже жалоба. С ней идут к терапевту — бесплатно.</p></details>
+          <details class="reason" name="reasons"><summary>«Боюсь узнать»</summary><p>Найти рано значит лечить проще. Страшнее узнать, когда уже болит.</p></details>
+          <details class="reason" name="reasons"><summary>«Это формальность»</summary><p>Так думают 64% россиян. Но маммография, мазок и анализ на скрытую кровь внутри неё настоящие.</p></details>
         </div>
       </section>
 
@@ -271,8 +274,8 @@
               </div>
             </div>
             <div class="parents__btns">
-              <a class="btn btn--dark" id="tgShare" href="#" target="_blank" rel="noopener" data-goal="share_parent">Отправить в Telegram</a>
-              <button class="btn btn--white" type="button" id="copyShare" data-goal="share_parent">Скопировать</button>
+              <button class="btn btn--dark" type="button" id="parentShare" data-goal="share_parent">Создать открытку</button>
+              <a class="btn btn--white" id="tgShare" href="#" target="_blank" rel="noopener" data-goal="share_parent_text">Текстом в Telegram</a>
             </div>
           </div>
           <div class="parents__msg">
@@ -300,5 +303,17 @@
       <p>Источники: «Состояние онкологической помощи населению России в 2024 году», ВЦИОМ, НАФИ, порядок диспансеризации Минздрава РФ (приказ № 404н), ст. 185.1 ТК РФ. Проект не заменяет консультацию врача.</p>
       <p>Учебный спецпроект, 2026</p>
     </footer>
+    <div class="sheet" id="sheet" hidden>
+      <div class="sheet__bg" data-close></div>
+      <div class="sheet__box" role="dialog" aria-modal="true" aria-label="Открытка">
+        <button class="sheet__x" type="button" data-close aria-label="Закрыть">×</button>
+        <img class="sheet__img" id="sheetImg" alt="Открытка с медкартой" />
+        <div class="sheet__btns">
+          <button class="btn btn--dark" type="button" id="sheetShare" data-goal="share_send">Отправить</button>
+          <a class="btn btn--outline" id="sheetSave" download="anamnez.png" data-goal="share_save">Сохранить</a>
+        </div>
+        <p class="note sheet__note">На телефоне «Отправить» откроет Telegram, сторис и мессенджеры. На компьютере сохрани картинку и отправь вручную.</p>
+      </div>
+    </div>
   </body>
 </html>

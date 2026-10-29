@@ -1,5 +1,6 @@
 import { planFor } from './plan.js'
 import { goal } from './goals.js'
+import { openSheet } from './share.js'
 
 export function initParents() {
   const age = document.getElementById('pAge')
@@ -8,7 +9,7 @@ export function initParents() {
   const who = document.getElementById('pWho')
   const msg = document.getElementById('pMsg')
   const tg = document.getElementById('tgShare')
-  const copy = document.getElementById('copyShare')
+  const shareBtn = document.getElementById('parentShare')
   const segs = document.querySelectorAll('[data-psex]')
   let sex = 'f'
 
@@ -26,7 +27,7 @@ export function initParents() {
     rows.innerHTML = list.slice(0, 4).map(([n, f]) => `<li><span>${n}</span><span class="hand">${f}</span></li>`).join('')
     const url = location.href.split('#')[0]
     tg.href = 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(textFor(a, list))
-    copy.dataset.text = textFor(a, list) + '\n' + url
+    shareBtn.onclick = () => openSheet({ title: (sex === 'f' ? 'Мам' : 'Пап') + ', это положено тебе бесплатно.', titleMuted: 'Давай вместе запишемся?', who: (sex === 'f' ? 'женщина, ' : 'мужчина, ') + a, rows: list.slice(0, 6), footer: 'Собери карту для себя' }, textFor(a, list) + '\n' + url)
   }
 
   age.addEventListener('input', render)
@@ -40,12 +41,5 @@ export function initParents() {
       render()
     })
   )
-  copy.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(copy.dataset.text)
-      copy.textContent = 'Скопировано'
-      setTimeout(() => (copy.textContent = 'Скопировать'), 1800)
-    } catch (e) {}
-  })
   render()
 }

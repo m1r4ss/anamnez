@@ -1,5 +1,6 @@
 import { planFor, dayOff } from './plan.js'
 import { goalOnce, goal } from './goals.js'
+import { openSheet } from './share.js'
 
 export const cardState = { age: null, sex: 'f', complaints: [] }
 const listeners = []
@@ -76,6 +77,12 @@ export function initCard() {
     passed.classList.add('is-done')
     card.classList.add('is-done')
     if (finalPassed) finalPassed.textContent = '✓ ' + d
+  })
+
+  document.getElementById('cardShare').addEventListener('click', () => {
+    const a = parseInt(cardState.age, 10)
+    const rows = planFor(a, cardState.sex)
+    openSheet({ title: 'Мне ' + a + '. Вот что мне положено', titleMuted: 'бесплатно по ОМС', who: (cardState.sex === 'f' ? 'женщина, ' : 'мужчина, ') + a, rows: rows.slice(0, 6), passed: passed.textContent, footer: 'А что записано в твоей карте?' }, 'Собрал(а) свою медкарту в «Анамнезе». А что положено тебе? ' + location.href.split('#')[0])
   })
 
   onCardChange((s) => {
