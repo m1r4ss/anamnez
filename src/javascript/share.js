@@ -63,7 +63,7 @@ export async function drawCard({ title, titleMuted, who, rows, passed = '—', f
   spaced(ctx, whoU, cardX + cardW - 48 - ww, cardY + 72, 3)
   ctx.fillStyle = 'rgba(20,22,27,.3)'; ctx.fillRect(cardX + 48, cardY + 100, cardW - 96, 2)
 
-  const SHORT = { 'Анализ кала на скрытую кровь': 'Скрытая кровь', 'Профилактический осмотр': 'Профосмотр', 'Внутриглазное давление': 'Глазное давление' }
+  const SHORT = { 'Тест на скрытую кровь': 'Скрытая кровь', 'Профилактический осмотр': 'Профосмотр', 'Внутриглазное давление': 'Глазное давление' }
   rows.forEach(([name0, freq], i) => {
     const name = SHORT[name0] || name0
     const ry = cardY + 100 + (i + 1) * rowH
