@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./images/favicon.svg" rel="icon" type="image/svg+xml" />
+    <title>Анамнез — «Жалоб нет» ещё не диагноз</title>
+    <meta name="title" content="Анамнез — «Жалоб нет» ещё не диагноз" />
+    <meta name="description" content="Спецпроект о профилактике. Узнай, какие обследования тебе положены бесплатно по ОМС, даже если ничего не болит или «само пройдёт»." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Анамнез — «Жалоб нет» ещё не диагноз" />
+    <meta property="og:description" content="Собери свою медкарту за минуту: что тебе положено проверить бесплатно." />
+    <meta property="og:image" content="./share/meta.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="./share/meta.png" />
+    <analytics></analytics>
+  </head>
+
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ============ ШАПКА ============ -->
+    <header class="header">
+      <a class="logo" href="#top" aria-label="Анамнез — наверх">АНАМНЕЗ<i></i></a>
+      <nav class="header__nav" aria-label="Разделы">
+        <a href="#story">История</a>
+        <a href="#card">Твоя карта</a>
+        <a href="#how">Как дойти</a>
+        <a href="#parents">Родителям</a>
+      </nav>
+      <a class="btn btn--outline header__cta" href="#card" data-goal="cta_header">Собрать свою карту</a>
+    </header>
+
+    <main id="top">
+      <!-- ============ ПЕРВЫЙ ЭКРАН ============ -->
+      <section class="hero">
+        <div class="hero__text">
+          <p class="eyebrow">Спецпроект о профилактике</p>
+          <h1 class="hero__title">«Жалоб нет» —<br />ещё не диагноз</h1>
+          <p class="hero__lead">Анамнез — то, что врач записывает с&nbsp;твоих слов. «Ничего не&nbsp;беспокоит» и&nbsp;«да&nbsp;так, ерунда» он запишет одинаково. Узнай, что тебе положено проверить бесплатно.</p>
+          <a class="btn btn--outline" href="#card" data-goal="cta_hero">Собрать свою карту</a>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="blob blob--blue hero__blob1"></div>
+          <div class="blob blob--violet hero__blob2"></div>
+          <div class="blob blob--peach hero__blob3"></div>
+          <div class="glass anamnesis hero__card">
+            <div class="anamnesis__head"><span>Анамнез</span><span>Влад, 24</span></div>
+            <div class="anamnesis__row"><span>Жалобы</span><span class="hand">нет</span></div>
+            <div class="anamnesis__row"><span>Беспокоит</span><span class="hand">ерунда</span></div>
+          </div>
+          <div class="glass pulse hero__pulse">
+            <div class="pulse__top"><span>Пульс</span><span class="chip">в норме</span></div>
+            <span class="pulse__title">Всё как обычно</span>
+            <div class="pulse__bottom">
+              <span class="pulse__num">72<small> уд/мин</small></span>
+              <svg width="130" height="56" viewBox="0 0 130 56" fill="none" stroke="#3B4FE0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M0 36h40l4-6 4 6h10l4 4 5-34 6 46 4-12h12l6-6 6 6h29" /></svg>
+            </div>
+          </div>
+          <div class="hero__tags">
+            <span class="chip chip--glass">Бесплатно по ОМС</span>
+            <span class="chip chip--glass">+1 оплачиваемый выходной</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ БЕГУЩАЯ СТРОКА ============ -->
+      <section class="marquee" aria-label="Жалоб нет. Самочувствие хорошее. Всё в норме.">
+        <div class="marquee__track" aria-hidden="true">
+          <span>ЖАЛОБ НЕТ</span><span class="plus"></span><span class="muted">САМОЧУВСТВИЕ ХОРОШЕЕ</span><span class="plus"></span><span>ДА ТАК, ЕРУНДА</span><span class="plus"></span><span class="muted">ВСЁ В НОРМЕ</span><span class="plus"></span>
+          <span>ЖАЛОБ НЕТ</span><span class="plus"></span><span class="muted">САМОЧУВСТВИЕ ХОРОШЕЕ</span><span class="plus"></span><span>ДА ТАК, ЕРУНДА</span><span class="plus"></span><span class="muted">ВСЁ В НОРМЕ</span><span class="plus"></span>
+        </div>
+      </section>
+
+      <!-- ============ ИСТОРИЯ ============ -->
+      <section class="story wrap" id="story">
+        <div class="story__side">
+          <h2 class="label">История героя</h2>
+          <p class="note">Из личного поста героя, публикуется с&nbsp;его согласия.</p>
+        </div>
+        <ol class="story__steps">
+          <li class="s1">Спорт, режим</li>
+          <li class="s2">Жалоб нет</li>
+          <li class="s3">Чекап</li>
+          <li class="s4">Диагноз</li>
+          <li class="s2">Лето на лечении</li>
+          <li class="s1">Сейчас здоров</li>
+        </ol>
+        <div class="story__visual">
+          <div class="story__back"></div>
+          <div class="story__front">
+            <div class="blob blob--blue story__blob1"></div>
+            <div class="blob blob--peach story__blob2"></div>
+            <figure class="glass story__quote" data-reveal>
+              <blockquote>«Я обнаружил его абсолютно случайно, на&nbsp;чекапе. <span>У&nbsp;меня не&nbsp;было никаких жалоб, я&nbsp;активно занимался спортом.»</span></blockquote>
+              <figcaption>Влад, 24 года · рак щитовидной железы, 2-я стадия · сейчас здоров</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ТЕНЬ ПОД СТЕКЛОМ ============ -->
+      <section class="shadow" id="shadow">
+        <div class="shadow__sticky">
+          <div class="wrap shadow__inner">
+            <div class="shadow__text">
+              <p class="label">Как это выглядит изнутри</p>
+              <h2 class="h2">Самочувствие — это матовое стекло. <span class="muted">Под ним не видно, что растёт</span></h2>
+              <ol class="shadow__states">
+                <li data-state="0"><b>«Жалоб нет»</b><span>Снаружи всё в норме. Под стеклом не разглядеть, что там.</span></li>
+                <li data-state="1"><b>«Да так, ерунда»</b><span>Устаёшь, ком в горле. Что-то угадывается, но легко списать на недосып.</span></li>
+                <li data-state="2"><b>Чекап</b><span>Проверка убирает стекло. То, что росло тихо, видно чётко — и это можно вылечить.</span></li>
+              </ol>
+            </div>
+            <div class="shadow__stage" aria-hidden="true">
+              <div class="shadow__spot"></div>
+              <div class="shadow__glass"></div>
+              <div class="shadow__contour"><i></i></div>
+              <span class="chip chip--white shadow__tag">жалоб нет</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ЦИФРЫ ============ -->
+      <section class="stats wrap">
+        <div class="stats__main">
+          <h2 class="h2">Большую часть рака находят, когда человек уже пришёл с&nbsp;жалобами, <span class="muted">а&nbsp;не&nbsp;на&nbsp;осмотре, который положен ему бесплатно.</span></h2>
+          <div class="stats__grid">
+            <div class="stat" data-reveal><b>73%</b><span>случаев рака выявляют не&nbsp;на&nbsp;осмотрах</span></div>
+            <div class="stat" data-reveal><b>64%</b><span>считают диспансеризацию формальностью</span></div>
+            <div class="stat" data-reveal><b>33%</b><span>людей 25–34 лет её пропускают</span></div>
+            <div class="stat stat--accent" data-reveal><b>1 день</b><span>оплачиваемого выходного на&nbsp;неё положено</span></div>
+          </div>
+        </div>
+        <figure class="stats__chart" aria-label="Как находят рак в России, 2024">
+          <figcaption>Как находят рак в России, 2024</figcaption>
+          <div class="orbit">
+            <div class="orbit__in"></div>
+            <div class="orbit__core"></div>
+            <span class="orbit__l orbit__l1"><i></i>Все новые случаи<br /><small>655 тыс.</small></span>
+            <span class="orbit__l orbit__l2"><i></i>Нашли на осмотрах<br /><small>27%</small></span>
+            <span class="orbit__l orbit__l3"><i></i>III–IV стадия<br /><small>34%</small></span>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ============ МЕДКАРТА ============ -->
+      <section class="checkup" id="card">
+        <div class="checkup__blob blob blob--blue"></div>
+        <div class="checkup__blob2 blob blob--peach"></div>
+        <div class="wrap">
+          <div class="checkup__head">
+            <h2 class="h1">А что записано<br /><span class="muted">в твоей карте?</span></h2>
+            <p class="lead">Введи возраст и пол. Покажем, что положено по программе диспансеризации, бесплатно по ОМС.</p>
+          </div>
+          <div class="checkup__body">
+            <form class="form" id="cardForm" autocomplete="off">
+              <label class="form__label" for="age">Сколько тебе лет</label>
+              <input class="form__input" id="age" name="age" type="number" inputmode="numeric" min="18" max="99" placeholder="Например, 29" />
+              <span class="form__label">Пол</span>
+              <div class="seg" role="radiogroup" aria-label="Пол">
+                <button type="button" class="seg__btn is-on" data-sex="f" role="radio" aria-checked="true">Женский</button>
+                <button type="button" class="seg__btn" data-sex="m" role="radio" aria-checked="false">Мужской</button>
+              </div>
+              <p class="note">Ничего не сохраняем. Это не диагноз и не замена врачу.</p>
+            </form>
+
+            <article class="medcard" id="medcard">
+              <div class="medcard__glass"></div>
+              <header class="medcard__top">
+                <span>Медицинская карта</span><span>Форма № 025/у</span>
+              </header>
+              <div class="medcard__fields">
+                <div><span>Пациент</span><b class="hand" id="mcWho">—</b></div>
+                <div><span>Возраст</span><b class="hand" id="mcAge">—</b></div>
+                <div><span>Жалобы</span><b class="hand" id="mcComplaints">нет</b></div>
+              </div>
+              <p class="medcard__caption">Лист профилактических обследований</p>
+              <ul class="medcard__rows" id="mcRows">
+                <li class="medcard__empty">Заполни возраст и пол — здесь появится твой список.</li>
+              </ul>
+              <div class="medcard__dayoff" id="mcDayoff" hidden>+ <span></span>, ст. 185.1 ТК РФ</div>
+              <footer class="medcard__passed">
+                <span>Пройдено</span>
+                <b class="medcard__dash" id="mcPassed">—</b>
+                <div class="stamp" aria-hidden="true"><span>анамнез</span></div>
+              </footer>
+              <div class="medcard__actions" id="mcActions" hidden>
+                <a class="btn btn--dark" href="https://www.gosuslugi.ru/" target="_blank" rel="noopener" data-goal="gosuslugi">Записаться на Госуслугах</a>
+                <button class="btn btn--outline" type="button" id="markDone" data-goal="mark_done">Я записался</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ЕСЛИ БЕСПОКОИТ ============ -->
+      <section class="complaints wrap" id="complaints">
+        <div class="complaints__head">
+          <h2 class="h2">А если что-то <span class="muted">всё-таки беспокоит?</span></h2>
+          <p class="lead">«Само пройдёт» — тоже запись в анамнезе. Отметь, что тянется дольше пары недель.</p>
+        </div>
+        <div class="complaints__body">
+          <div class="chips" id="chips">
+            <button type="button" class="chipbtn">Усталость дольше месяца</button>
+            <button type="button" class="chipbtn">Ком или уплотнение на шее</button>
+            <button type="button" class="chipbtn">Родинка меняется</button>
+            <button type="button" class="chipbtn">Кашель дольше трёх недель</button>
+            <button type="button" class="chipbtn">Похудел без причины</button>
+            <button type="button" class="chipbtn">Изжога и тяжесть постоянно</button>
+            <button type="button" class="chipbtn">Голос осип и не проходит</button>
+            <button type="button" class="chipbtn">Кровь в стуле или моче</button>
+            <button type="button" class="chipbtn">Плохо сплю, всё раздражает</button>
+          </div>
+          <div class="complaint-card" id="complaintCard">
+            <div class="complaint-card__head">Анамнез · жалобы</div>
+            <p class="hand complaint-card__hand" id="ccHand">нет</p>
+            <p class="complaint-card__title" id="ccTitle">Отметь, что беспокоит</p>
+            <p class="complaint-card__text" id="ccText">Даже если кажется, что это ерунда.</p>
+            <a class="btn btn--dark" id="ccBtn" href="https://www.gosuslugi.ru/" target="_blank" rel="noopener" data-goal="therapist" hidden>Записаться к терапевту</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ПРИЧИНЫ ============ -->
+      <section class="reasons wrap">
+        <div class="reasons__visual" aria-hidden="true">
+          <div class="blob blob--blue reasons__blob1"></div>
+          <div class="blob blob--peach reasons__blob2"></div>
+          <div class="glass reasons__plate"><span>Пять причин не идти к врачу</span><span class="chip chip--white">Нажми на любую</span></div>
+        </div>
+        <div class="reasons__list">
+          <p class="lead">Опросы показывают одно и то же: дело не в деньгах. Дело в том, что у здорового человека нет повода.</p>
+          <details class="reason" open><summary>«Мне рано»</summary><p>Диспансеризация положена с 18 лет. Рак Влада нашли в 24, без единой жалобы.</p></details>
+          <details class="reason"><summary>«Нет времени»</summary><p>Работодатель обязан дать оплачиваемый день: до 40 лет раз в три года, после 40 — каждый год.</p></details>
+          <details class="reason"><summary>«Само пройдёт»</summary><p>Если что-то тянется дольше пары недель, это уже жалоба. С ней идут к терапевту — бесплатно.</p></details>
+          <details class="reason"><summary>«Боюсь узнать»</summary><p>Найти рано значит лечить проще. Страшнее узнать, когда уже болит.</p></details>
+          <details class="reason"><summary>«Это формальность»</summary><p>Так думают 64% россиян. Но маммография, мазок и анализ на скрытую кровь внутри неё настоящие.</p></details>
+        </div>
+      </section>
+
+      <!-- ============ ТРИ ШАГА ============ -->
+      <section class="steps wrap" id="how">
+        <div class="steps__head">
+          <h2 class="h1">Три шага<br />до прочерка</h2>
+          <a class="btn btn--outline" href="./share/zayavlenie.txt" download data-goal="template">Шаблон заявления</a>
+        </div>
+        <p class="steps__lead">Диспансеризация — это пара часов <span class="muted">в&nbsp;поликлинике, к&nbsp;которой ты уже прикреплён, в&nbsp;оплаченный работодателем день.</span></p>
+        <ol class="timeline">
+          <li class="is-active"><b>Запишись</b><span>Через Госуслуги или в регистратуре своей поликлиники.</span></li>
+          <li><b>Возьми выходной</b><span>Заявление работодателю, день оплачивается. Статья 185.1 Трудового кодекса.</span></li>
+          <li><b>Скажи на входе</b><span>«Я на диспансеризацию по возрасту». Дадут маршрутный лист по кабинетам.</span></li>
+        </ol>
+      </section>
+
+      <!-- ============ РОДИТЕЛЯМ ============ -->
+      <section class="parents wrap" id="parents">
+        <div class="parents__box">
+          <div class="blob blob--violet parents__blob1"></div>
+          <div class="blob blob--peach parents__blob2"></div>
+          <div class="parents__text">
+            <h2 class="h1">Маме положено больше, чем тебе</h2>
+            <p class="lead">После 40 диспансеризация положена каждый год, и большая часть онкоскринингов тоже. Собери карту родителя и отправь одним сообщением.</p>
+            <div class="parents__controls">
+              <label class="form__label" for="pAge">Возраст</label>
+              <input class="form__input form__input--sm" id="pAge" type="number" min="18" max="99" value="58" />
+              <div class="seg seg--sm" role="radiogroup" aria-label="Пол родителя">
+                <button type="button" class="seg__btn is-on" data-psex="f" role="radio" aria-checked="true">Мама</button>
+                <button type="button" class="seg__btn" data-psex="m" role="radio" aria-checked="false">Папа</button>
+              </div>
+            </div>
+            <div class="parents__btns">
+              <a class="btn btn--dark" id="tgShare" href="#" target="_blank" rel="noopener" data-goal="share_parent">Отправить в Telegram</a>
+              <button class="btn btn--white" type="button" id="copyShare" data-goal="share_parent">Скопировать</button>
+            </div>
+          </div>
+          <div class="parents__msg">
+            <div class="glass bubble">
+              <p id="pMsg">Мам, посмотрела, что тебе положено бесплатно в этом году. Давай вместе запишемся?</p>
+              <div class="bubble__card">
+                <div class="anamnesis__head"><span>Анамнез</span><span id="pWho">женщина, 58</span></div>
+                <ul id="pRows"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ФИНАЛ ============ -->
+      <section class="final wrap">
+        <h2 class="h1 final__title">«Жалоб нет» и «ерунда» — <span class="muted">одна и та же пустая строка</span></h2>
+        <div class="final__line"><span>Пройдено:</span><b id="finalPassed"></b></div>
+        <a class="btn btn--blue" href="#card" data-goal="cta_final">Заполнить свою строку</a>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <span class="logo">АНАМНЕЗ<i></i></span>
+      <p>Источники: «Состояние онкологической помощи населению России в 2024 году», ВЦИОМ, НАФИ, порядок диспансеризации Минздрава РФ (приказ № 404н), ст. 185.1 ТК РФ. Проект не заменяет консультацию врача.</p>
+      <p>Учебный спецпроект, 2026</p>
+    </footer>
+  </body>
+</html>

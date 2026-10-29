@@ -1,0 +1,7 @@
+:root{
+  --ink:#14161B; --body:#3E434D; --quiet:#5B616E; --muted:#A0A5AF; --line:#E3E6EC;
+  --tile:#F3F4F7; --tile2:#EEF0F7; --blue:#3B4FE0; --lav:#B7BCF2; --lav2:#C7CCF6; --orange:#E0672E;
+  --pad:clamp(20px,5vw,72px); --max:1440px; --r:28px;
+  --sans:'Onest',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace; --hand:'Caveat',cursive;
+}
+$mobile:760px;
